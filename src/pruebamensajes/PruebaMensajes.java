@@ -4,6 +4,8 @@
  */
 package pruebamensajes;
 
+import java.util.Scanner;
+
 /**
  *
  * @author pinto
@@ -14,9 +16,15 @@ public class PruebaMensajes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String mensaje = "Hello World!";
+        Scanner preg = new Scanner(System.in);
+        System.out.println("Introduzca su frase:");
+        String mensaje = preg.nextLine();
+        if (mensaje.length()>=400) {
+            System.out.println("Su mensaje es demasiado largo");
+        }else{
         for (int i = 0; i < mensaje.length(); i++) {
-           System.out.println(mensaje.substring(i, i+1)); 
+           System.out.println(mensaje.substring(i, i+1));
+        }
         }
     }
     
